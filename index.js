@@ -51,8 +51,7 @@ async function updateLeetCodeGist(leetcode) {
         ]
         lines.push(line.join(" "))
     }
-
-
+    
     try {
         const filename = Object.keys(gist.data.files)[0]
         await octokit.gists.update({
@@ -84,6 +83,7 @@ function generateBarChart(percent, size) {
         .join("")
         .padEnd(size, syms.substring(0, 1));
 }
+
 
 (async() => {
     await main()
